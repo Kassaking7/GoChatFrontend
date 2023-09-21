@@ -1,9 +1,11 @@
+//18.117.188.105
 var socket = new WebSocket("ws://localhost:8080/ws");
 
 let connect = cb => {
   console.log("Attempting Connection...");
-
+  const usernameCookie = document.cookie;
   socket.onopen = () => {
+    socket.send(usernameCookie);
     console.log("Successfully Connected");
   };
 

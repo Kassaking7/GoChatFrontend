@@ -1,0 +1,49 @@
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-form {
+    width: 300px;
+  }
+  
+  .login-form-button {
+    width: 100%;
+  }
+  
+
+  .login-form-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .register-form-button {
+    width: 100%;
+  }
+  .login-form-button, .register-form-button {
+   
+    width: 100%;
+  }
+  
+  .login-form-button {
+    margin-bottom: 10px;
+    background-color: #e671d6;
+  }
+  .login-form-button:hover{
+    background-color: #e954d5 !important;
+  }
+  /* 媒体查询，当屏幕宽度小于或等于 600px 时应用 */
+  @media (max-width: 600px) {
+    .login-form-button, .register-form-button {
+      font-size: 13px; /* 增加按钮文字大小，使其在小屏幕上更易读 */
+    }
+  
+    .login-form-button {
+      margin-bottom: 15px; /* 增加按钮间距，使其在小屏幕上不会显得过于紧凑 */
+    }
+  }
+    

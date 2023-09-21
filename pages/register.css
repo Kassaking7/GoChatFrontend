@@ -1,0 +1,37 @@
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .register-form {
+    width: 300px;
+  }
+  
+  .registers-form-button {
+    width: 100%;
+    background-color: #e671d6;
+  }
+  
+  .registers-form-button:hover {
+    background-color: #e954d5;
+  }
+
+  /* Media query, apply when screen width is less or equal to 600px */
+  @media (max-width: 600px) {
+    .registers-form-button {
+      font-size: 13px; /* Increase button text size, for better readability on small screens */
+    }
+  
+    .registers-form-button {
+      margin-bottom: 15px; /* Increase button spacing, to avoid them being too tight on small screens */
+    }
+  }
+  .back-to-login-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
