@@ -3,13 +3,13 @@ import { UserOutlined, LockOutlined, MailOutlined, UserAddOutlined } from '@ant-
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import "./register.css"
-
+import {localhost} from "../src/app/api/local.js"
 export default function Register() {
   const router = useRouter();
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post('http://localhost:8080/register', values);
+      const response = await axios.post('http://'+localhost+':8080/register', values);
       if (response.status === 200) {
         router.push('/login'); // If registration is successful, redirect to the login page
       }

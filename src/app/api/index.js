@@ -1,5 +1,6 @@
 //18.117.188.105
-var socket = new WebSocket("ws://localhost:8080/ws");
+import {localhost} from "./local"
+var socket = new WebSocket("ws://"+localhost+":8080/ws");
 
 let connect = cb => {
   console.log("Attempting Connection...");

@@ -6,6 +6,7 @@ import ChatHistory from "./ChatHistory.js";
 import ChatInput from "./ChatInput.js";
 import axios from "axios";
 import { useRouter } from 'next/navigation';
+import {localhost} from "../src/app/api/local.js"
 export default function MyApp() {
   const [chatHistory, setChatHistory] = useState([]);
   const router = useRouter();
@@ -25,7 +26,7 @@ export default function MyApp() {
   useEffect(() => {
     const fetchChatHistory = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/chat-history');
+        const response = await axios.get('http://'+localhost+':8080/chat-history');
         console.log(response.data);
 
        const formattedHistory = response.data.map((item) => ({

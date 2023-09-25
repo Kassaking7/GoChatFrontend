@@ -4,12 +4,13 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import "./login.css"
 import React, { useEffect , useState } from "react";
+import {localhost} from "../src/app/api/local.js"
 export default function Login() {
   const router = useRouter();
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post('http://localhost:8080/login', values, { withCredentials: true });
+      const response = await axios.post('http://'+localhost+':8080/login', values, { withCredentials: true });
       if (response.status === 200) {
         router.push('/'); // If login is successful, redirect to the home page
       };
